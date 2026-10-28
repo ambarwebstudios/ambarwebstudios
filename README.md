@@ -88,7 +88,7 @@ Desarrollo de un sistema web destinado a facilitar la gestión académica y admi
 
 **Tecnologías:** PHP, MySQL, JavaScript, HTML5 y CSS3.
 
-🔗 [Ver repositorio](https://github.com/ambarwebstudios/sistema-gestion-escolar)
+🔗 [Ver repositorio](https://github.com/ambarwebstudios/sistema-gestion-escolar) · [Ver sitio web](https://morenalopezb.free.je/)
 
 ---
 
@@ -106,7 +106,7 @@ Desarrollo de una página web para una empresa dedicada a la comercialización d
 
 **Tipo de proyecto:** Sitio web comercial.
 
-🔗 [Ver repositorio](https://github.com/ambarwebstudios/jsm-piletas)
+🔗 [Ver repositorio](https://github.com/ambarwebstudios/jsm-piletas) · [Ver sitio web](https://warm-cannoli-8a1441.netlify.app/)
 
 ---
 
