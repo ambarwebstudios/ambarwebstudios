@@ -70,7 +70,7 @@ Desarrollo de un sitio web para un centro médico, con una interfaz moderna, nav
 
 **Tipo de proyecto:** Sitio web institucional.
 
-🔗 [Ver repositorio](URL_REPOSITORIO_CLINICA)
+🔗 [Ver repositorio](https://github.com/ambarwebstudios/ambarwebstudios/tree/main/proyectos%20completados/Centro%20M%C3%A9dico%20Desouches/clinica)
 
 ---
 
@@ -88,7 +88,7 @@ Desarrollo de un sistema web destinado a facilitar la gestión académica y admi
 
 **Tecnologías:** PHP, MySQL, JavaScript, HTML5 y CSS3.
 
-🔗 [Ver repositorio](URL_REPOSITORIO_COLEGIO)
+🔗 [Ver repositorio](https://github.com/ambarwebstudios/ambarwebstudios/tree/main/proyectos%20completados/Sistema%20de%20Gesti%C3%B3n%20Escolar/colegio)
 
 ---
 
@@ -106,7 +106,7 @@ Desarrollo de una página web para una empresa dedicada a la comercialización d
 
 **Tipo de proyecto:** Sitio web comercial.
 
-🔗 [Ver repositorio](URL_REPOSITORIO_JSM)
+🔗 [Ver repositorio](https://github.com/ambarwebstudios/ambarwebstudios/tree/main/proyectos%20completados/JSM%20Piletas/jsm-piletas/jsm-piletas)
 
 ---
 
