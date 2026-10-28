@@ -1,0 +1,125 @@
+/* ===== COLORES: cambiá solo estas variables ===== */
+:root{
+ --bg:#F4F7FF;      /* fondo de la página */
+ --surface:#FFFFFF; /* tarjetas */
+ --ink:#0F1B3D;     /* texto */
+ --muted:#5A6788;   /* texto secundario */
+ --main:#2F5BFF;    /* azul principal */
+ --deep:#1B2F8F;    /* azul oscuro */
+ --accent:#FF8A00;  /* naranja (etiquetas) */
+ --line:#D9E1F7;    /* bordes */
+ --grass:#6FB36A;   /* pasto de las ilustraciones */
+ box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);color-scheme:light}
+@media (prefers-color-scheme:dark){:root{--bg:#0B1230;--surface:#141F4A;--ink:#F1F4FF;--muted:#A9B6E0;--line:#27367A;--grass:#46804A;color-scheme:dark}}
+/* ================================================ */
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 16px/1.55 Figtree,system-ui,sans-serif}
+h1,h2,h3{font-family:'Bricolage Grotesque',system-ui,sans-serif;line-height:1.05;margin:0}
+.wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+header{display:flex;justify-content:space-between;align-items:center;padding:16px 0}
+.logo{font:800 22px 'Bricolage Grotesque',sans-serif;display:flex;align-items:center;gap:8px}
+.logo i{width:30px;height:30px;border-radius:50%;background:radial-gradient(circle at 35% 30%,#A9C2FF,var(--main) 55%,var(--deep))}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;border:0;border-radius:999px;padding:12px 20px;font:700 15px Figtree,sans-serif;cursor:pointer;text-decoration:none;background:#25D366;color:#052e16;min-height:44px}
+.btn:hover{filter:brightness(1.06)}
+.btn.ghost{background:transparent;color:var(--ink);border:2px solid var(--line)}
+:focus-visible{outline:3px solid var(--deep);outline-offset:2px}
+.hero{display:grid;grid-template-columns:1.1fr .9fr;gap:32px;align-items:center;padding:24px 0 48px}
+.hero h1{font-size:clamp(36px,6vw,64px);font-weight:800;letter-spacing:-.02em}
+.hero p{font-size:18px;color:var(--muted);max-width:46ch;margin:16px 0 24px}
+.hero .cta{display:flex;gap:12px;flex-wrap:wrap}
+.hero svg{width:100%;height:auto;border-radius:28px;display:block}
+.perks{display:flex;gap:10px;flex-wrap:wrap;padding:0 0 40px;margin:0;list-style:none}
+.perks li{background:var(--surface);border:1px solid var(--line);border-radius:999px;padding:8px 16px;font-weight:500;font-size:14px}
+h2{font-size:clamp(28px,4vw,40px);font-weight:800;margin-bottom:8px}
+.sub{color:var(--muted);margin:0 0 28px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(290px,1fr));gap:22px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:24px;overflow:hidden;display:flex;flex-direction:column}
+.card svg{width:100%;height:auto;display:block}
+.card .b{padding:18px 20px 22px;display:flex;flex-direction:column;gap:10px;flex:1}
+.card h3{font-size:22px}
+.tag{align-self:flex-start;background:var(--accent);color:#2b1700;font:700 12px Figtree;padding:3px 10px;border-radius:999px}
+.nota{color:var(--muted);font-size:14px}
+dl{margin:0;display:grid;grid-template-columns:auto 1fr;gap:4px 14px;font-size:14px}
+dt{color:var(--muted)}dd{margin:0;font-weight:500}
+.price{font:800 30px 'Bricolage Grotesque',sans-serif;margin-top:auto}
+.price small{font:500 13px Figtree;color:var(--muted);display:block}
+section{padding:48px 0}
+.mat{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px}
+.mat div{border-left:4px solid var(--accent);padding:4px 0 4px 16px}
+.mat b{display:block;font-size:17px}.mat span{color:var(--muted);font-size:15px}
+form{background:var(--surface);border:1px solid var(--line);border-radius:24px;padding:26px;display:grid;gap:14px;grid-template-columns:1fr 1fr}
+form .full{grid-column:1/-1}
+label{display:grid;gap:5px;font-weight:700;font-size:14px}
+input,select,textarea{font:400 16px Figtree,sans-serif;padding:12px 14px;border-radius:12px;border:1.5px solid var(--line);background:var(--bg);color:var(--ink);width:100%}
+footer{padding:32px 0 40px;color:var(--muted);font-size:14px;border-top:1px solid var(--line)}
+.fab{position:fixed;right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px));z-index:5;box-shadow:0 6px 18px rgba(0,0,0,.25)}
+@media(max-width:760px){.hero{grid-template-columns:1fr}form{grid-template-columns:1fr}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+
+/* ===== MOVIMIENTO ===== */
+#burbujas{position:fixed;inset:0;overflow:hidden;pointer-events:none;z-index:0}
+#burbujas i{position:absolute;bottom:-40px;border-radius:50%;background:radial-gradient(circle at 30% 30%,rgba(255,255,255,.7),rgba(47,91,255,.18));border:1px solid rgba(47,91,255,.3);animation:sube linear infinite}
+@keyframes sube{0%{transform:translate(0,0)}50%{transform:translate(22px,-55vh)}100%{transform:translate(-14px,-115vh)}}
+.wrap{position:relative;z-index:1}
+
+/* título: palabras que entran una a una */
+.hero h1 span{display:inline-block;animation:entra .8s cubic-bezier(.2,.8,.2,1) both}
+.hero h1 span:nth-child(2){animation-delay:.15s}.hero h1 span:nth-child(3){animation-delay:.3s}
+.hero p,.hero .cta{animation:entra .8s .5s cubic-bezier(.2,.8,.2,1) both}
+@keyframes entra{from{opacity:0;transform:translateY(26px)}to{opacity:1;transform:none}}
+
+/* pileta del hero: flota */
+#heroPool{animation:flota 5s ease-in-out infinite,entra 1s .2s both}
+@keyframes flota{0%,100%{transform:translateY(0) rotate(-.6deg)}50%{transform:translateY(-10px) rotate(.6deg)}}
+
+/* agua */
+.ola.a{animation:ondaA 3.4s ease-in-out infinite alternate}
+.ola.b{animation:ondaB 4.2s ease-in-out infinite alternate}
+@keyframes ondaA{to{transform:translateX(26px)}}
+@keyframes ondaB{from{transform:translateX(26px)}to{transform:translateX(-10px)}}
+.brillo{animation:brillo 5s ease-in-out infinite}
+@keyframes brillo{from{transform:skewX(-20deg) translateX(0)}to{transform:skewX(-20deg) translateX(420px)}}
+
+/* ola animada que separa secciones */
+.onda{display:block;width:100%;height:50px;margin:-8px 0 20px}
+.onda path{fill:var(--main);opacity:.25;animation:marea 6s ease-in-out infinite alternate}
+@keyframes marea{from{transform:translateX(0)}to{transform:translateX(-300px)}}
+.onda{overflow:hidden}.onda path{transform-origin:left}
+
+/* tarjetas: aparecen al hacer scroll y reaccionan al mouse */
+.card{opacity:0;transform:translateY(40px) scale(.97);transition:opacity .7s,transform .7s cubic-bezier(.2,.8,.2,1),box-shadow .25s}
+.card.ver{opacity:1;transform:none}
+.card:hover{box-shadow:0 18px 36px rgba(27,47,143,.25)}
+.card.ver{transition:transform .15s ease-out,box-shadow .25s,opacity .7s}
+.rev{opacity:0;transform:translateY(34px);transition:opacity .8s,transform .8s}
+.rev.ver{opacity:1;transform:none}
+.tag{animation:latido 2s ease-in-out infinite}
+@keyframes latido{50%{transform:scale(1.08)}}
+
+/* botones */
+.btn{transition:transform .2s,filter .2s}
+.btn:hover{transform:translateY(-2px) scale(1.03)}
+.fab{animation:pulso 2.4s infinite}
+@keyframes pulso{0%{box-shadow:0 0 0 0 rgba(37,211,102,.6),0 6px 18px rgba(0,0,0,.25)}70%{box-shadow:0 0 0 18px rgba(37,211,102,0),0 6px 18px rgba(0,0,0,.25)}100%{box-shadow:0 0 0 0 rgba(37,211,102,0),0 6px 18px rgba(0,0,0,.25)}}
+.perks li{transition:transform .2s,border-color .2s}.perks li:hover{transform:translateY(-3px);border-color:var(--main)}
+
+/* Modo calmo: lo activa el botón "Movimiento" */
+.calmo *,.calmo *::before,.calmo *::after{animation:none!important;transition:none!important}
+.calmo .card,.calmo .rev{opacity:1;transform:none}
+.calmo #burbujas{display:none}
+.mov{background:var(--surface);color:var(--ink);border:1.5px solid var(--line);border-radius:999px;padding:8px 14px;font:700 13px Figtree,sans-serif;cursor:pointer;min-height:44px}
+.top{display:flex;gap:10px;align-items:center}
+
+/* ===== SERVICIOS, ENVÍOS Y PAGOS ===== */
+.svc .ico{font-size:34px;line-height:1}
+.svc .b{gap:12px}.svc .btn{margin-top:auto}
+.info{display:grid;grid-template-columns:1.1fr .9fr;gap:22px;align-items:stretch}
+.mapa{border-radius:24px;overflow:hidden;border:1px solid var(--line);min-height:340px;background:var(--surface)}
+.mapa iframe{width:100%;height:100%;min-height:340px;border:0;display:block}
+.datos{display:grid;gap:14px;align-content:start}
+.dato{background:var(--surface);border:1px solid var(--line);border-left:4px solid var(--accent);border-radius:16px;padding:14px 16px}
+.dato b{display:block;font-size:16px}.dato span{color:var(--muted);font-size:15px}
+.dato a{color:var(--deep);font-weight:700}
+@media (prefers-color-scheme:dark){.dato a{color:#A9C2FF}}
+@media(max-width:760px){.info{grid-template-columns:1fr}}

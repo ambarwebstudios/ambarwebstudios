@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>JSM Piletas · Piletas de fibra de vidrio sin hacer pozo</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=Figtree:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<div id="burbujas" aria-hidden="true"></div>
+<div class="wrap">
+<header><div class="logo"><i></i>JSM Piletas</div><div class="top"><button class="mov" id="mov" aria-pressed="false">Movimiento: activado</button><a class="btn" data-wa="Hola! Quiero consultar por una pileta de JSM Piletas.">WhatsApp</a></div></header>
+
+<div class="hero">
+ <div>
+  <h1><span>Tu pileta</span> <span>en casa,</span> <span>sin hacer pozo.</span></h1>
+  <p>Fabricamos piletas de fibra de vidrio para espacios reducidos. Autoportantes, listas para instalar y con envíos a todo el país.</p>
+  <div class="cta"><a class="btn" data-wa="Hola! Vi el catálogo y quiero coordinar la compra de una pileta.">Coordinar compra por WhatsApp</a><a class="btn ghost" href="#catalogo">Ver modelos y precios</a></div>
+ </div>
+ <div id="heroPool"></div>
+</div>
+<svg class="onda" viewBox="0 0 1200 60" preserveAspectRatio="none" aria-hidden="true"><path d="M0 30q150-40 300 0t300 0t300 0t300 0t300 0t300 0V60H0z"/></svg>
+<ul class="perks"><li>No necesita ser enterrada</li><li>Fácil mantenimiento</li><li>Fibra de vidrio de alta resistencia</li><li>Ideal patios, terrazas y jardines pequeños</li></ul>
+
+<section id="catalogo" style="padding-top:8px">
+ <h2>Catálogo</h2>
+ <p class="sub">Precios en efectivo. Tocá "Consultar" y se abre WhatsApp con el modelo ya elegido.</p>
+ <div class="grid" id="grid"></div>
+</section>
+
+<section class="rev">
+ <h2>Materiales y terminación</h2>
+ <p class="sub">Lo que tienen en común todos los modelos.</p>
+ <div class="mat">
+  <div><b>Fibra de vidrio de alta resistencia</b><span>Estructura ultrarreforzada, no se oxida ni se corroe.</span></div>
+  <div><b>Autoportante</b><span>Se apoya sobre una base nivelada. Sin obra, sin escombros.</span></div>
+  <div><b>Superficie antideslizante</b><span>Terminación lisa y fácil de limpiar.</span></div>
+  <div><b>Fabricación propia</b><span>Hechas en Monte Grande, al sur del GBA. Envíos a todo el país.</span></div>
+ </div>
+</section>
+
+<section id="servicios" class="rev">
+ <h2>Servicios</h2>
+ <p class="sub">Además de fabricar piletas, nos encargamos de instalarlas, equiparlas y mantenerlas.</p>
+ <div class="grid" id="srv"></div>
+</section>
+
+<section id="info" class="rev">
+ <h2>Envíos y medios de pago</h2>
+ <p class="sub">Estamos en Monte Grande, al sur del GBA, y hacemos envíos a todo el país.</p>
+ <div class="info">
+  <div class="mapa"><iframe title="Mapa: Monte Grande, Buenos Aires" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=Monte+Grande,+Buenos+Aires&amp;output=embed"></iframe></div>
+  <div class="datos">
+   <div class="dato"><b>📍 Dónde estamos</b><span>Monte Grande, al sur del GBA. <a href="https://www.google.com/maps/search/?api=1&amp;query=Monte+Grande,+Buenos+Aires" target="_blank" rel="noopener">Abrir en Google Maps</a></span></div>
+   <div class="dato"><b>🚚 Envíos</b><span>Hacemos envíos a todo el país. Consultá el costo de envío en tu zona o localidad.</span></div>
+   <div class="dato"><b>💳 Medios de pago</b><span>Podés abonar en efectivo o por Mercado Pago. Pedí tu presupuesto y acordamos el medio de pago.</span></div>
+   <div class="dato"><b>📋 Presupuesto a medida</b><span>Los valores dependen del servicio: todas las cotizaciones se hacen según el cliente y sus necesidades.</span></div>
+   <a class="btn" data-wa="Hola! Quiero consultar el costo de envío a mi zona y pedir un presupuesto.">Consultar envío y presupuesto</a>
+  </div>
+ </div>
+</section>
+
+<section id="comprar" class="rev">
+ <h2>Coordinemos tu compra</h2>
+ <p class="sub">Completá los datos y el pedido llega armado a nuestro WhatsApp. Respondemos para confirmar stock, entrega y forma de pago.</p>
+ <form id="f">
+  <label>Nombre<input name="n" required autocomplete="name"></label>
+  <label>Localidad / barrio<input name="l" required autocomplete="address-level2"></label>
+  <label class="full">Pileta o servicio<select name="m" id="sel"></select></label>
+  <label>Forma de pago<select name="p"><option>A coordinar</option><option>Efectivo</option><option>Mercado Pago</option></select></label>
+  <label>Envío<select name="e"><option>Retiro por Monte Grande</option><option>Envío a mi localidad</option></select></label>
+  <label class="full">Comentarios (opcional)<textarea name="c" rows="3" placeholder="Medidas del patio, color preferido, fecha de entrega..."></textarea></label>
+  <button class="btn full" type="submit">Enviar pedido por WhatsApp</button>
+ </form>
+</section>
+<footer>JSM Piletas · Fabricantes de piletas de fibra de vidrio · El Jagüel, Monte Grande, Buenos Aires · Instagram @jsmpiletas<br>Los precios y la disponibilidad se confirman por WhatsApp.</footer>
+</div>
+<a class="btn fab" data-wa="Hola! Quiero consultar por una pileta.">Consultar por WhatsApp</a>
+
+<script src="js/data.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
