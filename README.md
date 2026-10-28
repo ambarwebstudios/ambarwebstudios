@@ -129,18 +129,6 @@ Cada proyecto representa una oportunidad para combinar creatividad, programació
 
 ---
 
-## 📊 Mi actividad en GitHub
-
-<div align="center">
-
-![GitHub Stats](https://github-readme-stats.vercel.app/api?username=ambarwebstudios&show_icons=true&theme=tokyonight&hide_border=true)
-
-![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=ambarwebstudios&layout=compact&theme=tokyonight&hide_border=true)
-
-</div>
-
----
-
 ## 🤝 Trabajemos juntos
 
 Estoy interesada en seguir creciendo profesionalmente, colaborar en proyectos tecnológicos y participar en nuevas oportunidades dentro del desarrollo web.
