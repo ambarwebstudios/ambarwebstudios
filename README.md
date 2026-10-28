@@ -70,7 +70,7 @@ Desarrollo de un sitio web para un centro médico, con una interfaz moderna, nav
 
 **Tipo de proyecto:** Sitio web institucional.
 
-🔗 [Ver repositorio](https://github.com/ambarwebstudios/centro-medico-desouches)
+🔗 [Ver repositorio](https://github.com/ambarwebstudios/centro-medico-desouches) · [Ver sitio web](https://rad-paprenjak-731ba4.netlify.app/)
 
 ---
 
